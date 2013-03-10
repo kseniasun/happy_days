@@ -1,0 +1,11 @@
+h2 Aktualne ogłoszenia
+ul 
+	- Note.all.map do |note|
+		li
+			.title
+				= note.title
+			.author 
+				= image_tag(note.user.picture_url, :width=>"50px") if note.user.picture.present?
+
+
+
